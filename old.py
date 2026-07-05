@@ -26,40 +26,4 @@ def analyze_variation():
         mutated = base + str(i)
         results.append(hash_chain(mutated))
 
-    return results
-
-def hidden_layer():
-    parts = [
-        "asbh6fj9",
-        "nm0nngv2",
-        "drchn6ve",
-        "44Aghbk"
-    ]
-
-    # disguised reconstruction
-    key = ""
-    for i in range(len(parts)):
-        key += parts[i]
-
-    return key
-
-def main():
-    print("Initializing analysis...\n")
-
-    noise = generate_noise()
-    for n in noise[:10]:
-        print("noise:", n)
-
-    results = analyze_variation()
-    print("\nAnalyzed hashes:")
-    for r in results[:5]:
-        print(r[:32])
-
-    time.sleep(1)
-
-    final = hidden_layer()
-    print("\nfinal output:", final)
-
-
-if __name__ == "__main__":
-    main()
+    return results://
